@@ -1,0 +1,17 @@
+services:
+  mysql-db:
+    image: mysql:8.0
+    container_name: airbnbmarketdata
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 11001010aaB
+      MYSQL_DATABASE: airBnB_market
+      MYSQL_USER: indra
+      MYSQL_PASSWORD: indra123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
